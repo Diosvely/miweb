@@ -1,0 +1,61 @@
+Configuración Inicial
+Comando	Descripción
+git config --global user.name "Tu Nombre"	Establece tu nombre de usuario
+git config --global user.email "tu@email.com"	Establece tu correo electrónico
+git config --list	Muestra la configuración actual de Git
+Iniciar un Repositorio
+Comando	Descripción
+git init	Inicializa un repositorio Git en el directorio actual
+git clone <url-repositorio>	Clona un repositorio remoto a tu máquina local
+Trabajar con Cambios
+Comando	Descripción
+git status	Muestra el estado de los archivos (modificados, staged, etc.)
+git add <archivo>	Añade un archivo al área de staging
+git add .	Añade todos los archivos modificados al área de staging
+git commit -m "mensaje"	Guarda los cambios en el repositorio con un mensaje descriptivo
+git commit --amend	Modifica el último commit (útil para corregir mensajes o agregar cambios olvidados)
+Ramas (Branches)
+Comando	Descripción
+git branch	Lista todas las ramas locales
+git branch <nombre-rama>	Crea una nueva rama
+git checkout <nombre-rama>	Cambia a la rama especificada
+git checkout -b <nombre-rama>	Crea una nueva rama y se cambia a ella
+git merge <nombre-rama>	Fusiona una rama con la rama actual
+git branch -d <nombre-rama>	Elimina una rama local (si ya está fusionada)
+Sincronizar con Repositorios Remotos
+Comando	Descripción
+git remote add origin <url-repositorio>	Conecta tu repositorio local a un remoto
+git remote -v	Muestra los repositorios remotos configurados
+git push origin <nombre-rama>	Sube cambios al repositorio remoto
+git pull origin <nombre-rama>	Descarga cambios del repositorio remoto y los fusiona localmente
+git fetch	Descarga cambios del remoto pero no los fusiona
+Historial y Diferencias
+Comando	Descripción
+git log	Muestra el historial de commits
+git log --oneline	Muestra el historial resumido (una línea por commit)
+git log --graph	Muestra el historial con un gráfico de ramas
+git diff	Muestra diferencias entre archivos modificados y el último commit
+git diff <commit1> <commit2>	Compara cambios entre dos commits
+Deshacer Cambios
+Comando	Descripción
+git restore <archivo>	Descarta cambios en un archivo modificado (antes git checkout -- <archivo>)
+git reset --hard HEAD	Elimina todos los cambios locales no guardados (¡Cuidado! Es destructivo)
+git revert <commit>	Crea un nuevo commit que deshace los cambios de un commit anterior
+Etiquetas (Tags)
+Comando	Descripción
+git tag	Lista todas las etiquetas
+git tag -a v1.0 -m "Versión 1.0"	Crea una etiqueta anotada
+git push origin --tags	Sube etiquetas al repositorio remoto
+Otros Comandos Útiles
+Comando	Descripción
+git stash	Guarda cambios temporales sin hacer commit
+git stash pop	Recupera los cambios guardados con stash
+git cherry-pick <commit>	Aplica un commit específico de otra rama
+Consejos Adicionales
+Usa git help <comando> para ver la ayuda de un comando específico.
+
+Siempre verifica git status antes y después de realizar cambios.
+
+Si trabajas con repositorios remotos, git pull antes de git push para evitar conflictos.
+
+¿Necesitas más detalles sobre algún comando en particular? 😊
